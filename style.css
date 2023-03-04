@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   color: #6c6c6c;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -11,81 +10,99 @@ a {
   color: #38b48b;
 }
 
+/*ヘッダ：横幅100%、高さ100px、背景色darkgreen*/
+/*見出しの上部に10pxの余白を設定*/
 header {
   width: 100%;
-  height: 100px;
-  background-color: darkgreen;
   padding-top: 10px;
+  height: 100px;
   text-align: center;
+  background-color: darkgreen;
 }
 
 header .heading a {
+  font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
 
-.nav-list {
+/* nav */
+/*ナビゲーション領域の上下に10pxの余白を設定。 */
+.navigation {
   text-align: center;
-  padding: 10px 0 10px 0;
+  margin: 10px 0;
+  display: inline-block;
 }
-
+/*ナビゲーション項目はそれぞれ左右に20pxの余白を設定。*/
 .nav-list-item {
   list-style: none;
   display: inline-block;
-  margin: 0 20px ;
+  margin: 0 20px;
   color: #fff;
 }
 
+
+/*メイン領域は上部に10px、左右下には40pxの内部余白（padding）を設定。*/
 main {
+  display: inline-block;
   width: 100%;
-  display:inline-block;
+  height: auto;
   padding: 10px 40px 40px 40px;
   background-color: #ecfcdf;
 }
 
+/*My name is Skura Yoko*/
 .introduction-h2 {
   padding-bottom: 10px;
   text-align: center;
 }
 
-.row {
-  display: flex;
-  line-height: 40px;
-}
 
-
-.introduction-img-area {
+/*画像領域*/
+/*画像領域は横幅を30%とし、右側外部余白を10pxとする*/
+.introduction-img-area{
+  width: 30%;
   display: flex;
   justify-content: center;
-  width: 30%;
-  margin-right: 10px; /*自己紹介領域との隙間を空ける*/
-  padding-bottom: 50px;
-
+  margin-right: 10px;/*自己紹介領域との隙間を空ける*/
 }
-
-.my-picture {
+/*画像*/
+/*横幅を100%、角を10px丸くする*/
+.my-picture{
   width: 100%;
   border-radius: 10px;
+  background-size:cover ;
+  padding-bottom: 20%;
 }
 
+
+/*自己紹介文領域*/
+/*背景色：#fff 角丸：10px 横幅：70% 左右内部余白：10px*/
+.introduction-area {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 70%;
+  padding: o 10px;
+}
+
+/*自己紹介文*/
+/*自己紹介文の１行の高さは40pxとする。*/
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 40px;
+}
+/*自己紹介文の見出し項目は横幅100px、文字の太さはboldを設定する。*/
 .label{
-  font-weight: bold;
   width: 100px;
+  font-weight: bold;
 }
-
+/*親要素*/
 .introduction-contents {
   display: flex;
-}
-
-
-
-.introduction-area {
   justify-content: center;
-  width: 70%;
-  background-color: #fff;
-  padding: 0 10px 0 10px;
-  border-radius: 10px;
 }
 
+/*FontAwesome*/
 .social i {
   display: inline-block;
   margin-right: 20px;
